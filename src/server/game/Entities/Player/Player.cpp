@@ -22806,7 +22806,7 @@ void Player::LearnAllMySpells()
         2836,
 
         // death knight
-        3714, 53341, 53343, 54447, 53342, 53331, 54446, 43323, 53344, 70164, 62158, 50977,
+        3714, 53341, 53343, 54447, 53342, 53331, 54446, 43323, 53344, 70164, 62158,
 
         // shaman
         6196, 66842, 66843, 66844,
@@ -22818,7 +22818,8 @@ void Player::LearnAllMySpells()
         5225, 20719, 62600,
 
         // passives
-        3127, 750, 674, 8737, 198, 199, 264, 227, 2567, 5011, 200, 266, 196, 197, 201, 202, 1180, 15590
+        3127, 750, 674, 8737, 198, 199, 264, 227, 2567, 5011, 200, 266, 196, 197, 201,
+        202, 1180, 15590, 33388, 33391, 48954
     };
 
     ChrClassesEntry const* classEntry = sChrClassesStore.LookupEntry(getClass());
@@ -22843,7 +22844,7 @@ void Player::LearnAllMySpells()
             if (!IsSpellFitByClassAndRace(spellInfo->Id))
                 continue;
 
-            if (spellInfo->Id == 3714)
+            if (spellInfo->Id == 3714 || spellInfo->Id == 50977)
             {
                 if (getClass() == CLASS_DEATH_KNIGHT)
                     LearnSpell(spellInfo->Id, false);

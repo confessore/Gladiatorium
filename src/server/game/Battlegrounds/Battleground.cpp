@@ -781,7 +781,7 @@ void Battleground::EndBattleground(uint32 winner)
         // Reward winner team
         if (team == winner)
         {
-            if (IsRandom() || BattlegroundMgr::IsBGWeekend(GetTypeID()))
+            if (IsRandom() ||BattlegroundMgr::IsBGWeekend(GetTypeID()))
             {
                 UpdatePlayerScore(player, SCORE_BONUS_HONOR, GetBonusHonorFromKill(winner_kills));
                 if (CanAwardArenaPoints())
@@ -791,6 +791,8 @@ void Battleground::EndBattleground(uint32 winner)
             }
 
             player->UpdateAchievementCriteria(ACHIEVEMENT_CRITERIA_TYPE_WIN_BG, player->GetMapId());
+
+            player->AddItem(51320, 1);
         }
         else
         {
