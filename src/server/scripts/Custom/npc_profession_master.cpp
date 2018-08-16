@@ -9,7 +9,7 @@
 class npc_profession_master : public CreatureScript
 {
 public:
-    npc_profession_master() : CreatureScript("test") {}
+    npc_profession_master() : CreatureScript("profession") {}
 
     struct npc_profession_masterAI : public ScriptedAI
     {
